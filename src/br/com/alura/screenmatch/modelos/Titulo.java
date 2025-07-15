@@ -42,6 +42,14 @@ public class Titulo {
         return duracaoEmMinutos;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
     public double pegaMedia(){
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }

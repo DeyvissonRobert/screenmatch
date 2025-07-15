@@ -4,6 +4,9 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -21,7 +24,6 @@ public class Principal {
         // meuFilme.somaDasAvaliacoes = 10;
         // meuFilme.totalDeAvaliacoes = 1;
         // System.out.println(meuFilme.pegaMedia());
-
 
         Serie lost = new Serie();
         lost.setNome("Lost");
@@ -51,5 +53,20 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filmeDaKaylanny = new Filme();
+        filmeDaKaylanny.setDuracaoEmMinutos(200);
+        filmeDaKaylanny.setNome("Acompanhante Perfeita");
+        filmeDaKaylanny.setAnoDeLancamento(2004);
+        filmeDaKaylanny.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDaKaylanny);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro Filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("toString do Filme: " + listaDeFilmes.get(0).toString());
     }
 }

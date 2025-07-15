@@ -13,9 +13,13 @@ public class Filme extends Titulo implements Classificavel {
         this.diretor = diretor;
     }
 
-
     @Override
     public int getClassificacao() {
         return (int) pegaMedia() /2;
+    }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 }
